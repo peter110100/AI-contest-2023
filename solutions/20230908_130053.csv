@@ -1,0 +1,13 @@
+Question file,Solution code,ChatGPT thought
+question.txt,"def solution(N):
+    binary = bin(N)[2:]
+    max_gap = 0
+    current_gap = 0
+    for digit in binary:
+        if digit == '1':
+            if current_gap > max_gap:
+                max_gap = current_gap
+            current_gap = 0
+        else:
+            current_gap += 1
+    return max_gap","To find the longest binary gap in a positive integer N, we can convert N to its binary representation using the bin() function in Python. Then, we can iterate through the binary representation to count the length of consecutive zeros between ones. We keep track of the maximum gap length found so far and return it at the end. If there are no binary gaps, we return 0."

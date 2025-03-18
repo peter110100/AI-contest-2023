@@ -1,0 +1,12 @@
+Question file,Solution code,ChatGPT thought
+question.txt,"def solution(N):
+    binary = bin(N)[2:]
+    max_gap = 0
+    current_gap = 0
+    for digit in binary:
+        if digit == '0':
+            current_gap += 1
+        else:
+            max_gap = max(max_gap, current_gap)
+            current_gap = 0
+    return max_gap","To find the longest binary gap in a positive integer N, we can convert N to its binary representation and then iterate over the binary digits. We can keep track of the current binary gap length and update the maximum binary gap length whenever we encounter a '1' digit. At the end, we return the maximum binary gap length."
